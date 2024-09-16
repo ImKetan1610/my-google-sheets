@@ -1,5 +1,5 @@
 // function for calculating the no of visible rows and cols
-export const calculateRowsAndColToDisplay = (size, visibleArea) => {
+export const calculateRowsAndColToDisplay = (size, visibleArea, offset) => {
   // initialize an array to store the col or row
   const visible = [];
 
@@ -9,7 +9,7 @@ export const calculateRowsAndColToDisplay = (size, visibleArea) => {
 
   //  initializing a variable from where the col or row starts
   let idx = 0;
-  let nextStart = 0;
+  let nextStart = offset;
 
   //  creating a loop to check where the col can be added inside the visible area or not
   while (nextStart < visibleArea) {
